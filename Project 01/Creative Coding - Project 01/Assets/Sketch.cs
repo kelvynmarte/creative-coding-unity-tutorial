@@ -7,20 +7,25 @@ public class Sketch : MonoBehaviour {
 	public GameObject cubePrefab;
 	// Use this for initialization
 	void Start () {
-		int totalCubes = 12;
-		float totalDistance = 5.0f;
+		int totalCubes = 20;
+		float totalDistance = 2.5f;
 
 		for (int i = 0; i < totalCubes; i++) {
 			float perc = i / (float)totalCubes;
-			float x = perc * totalDistance;
+
+			float sin = Mathf.Sin (perc * Mathf.PI/2);
+
+			float x = 2.0f + sin * totalDistance;
 			float y = 5.0f;
 			float z = 0.0f;
 
 			GameObject newCube = (GameObject) Instantiate (cubePrefab, new Vector3 (x, y, z), Quaternion.identity);
 			CubeRotation cubeRotation = newCube.GetComponent<CubeRotation> ();
-			cubeRotation.SetSize (1-perc);
-			cubeRotation.rotateSpeed = perc;
+			cubeRotation.SetSize ((1-perc) * 0.6f);
+			cubeRotation.rotateSpeed = .4f + perc * 2.2f; // perc
 		}
+
+
 
 	}
 	

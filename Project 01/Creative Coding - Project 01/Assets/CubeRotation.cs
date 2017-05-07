@@ -10,7 +10,7 @@ public class CubeRotation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spinSpeed = new Vector3 (Random.value,Random.value,Random.value);
-		spinAxis.x = (Random.value - Random.value) * 0.3f;
+		spinAxis.x = (Random.value - Random.value) * 0.15f;
 	}
 
 	public void SetSize(float size){

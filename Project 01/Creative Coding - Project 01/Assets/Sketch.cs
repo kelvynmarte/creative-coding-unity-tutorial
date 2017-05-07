@@ -8,14 +8,14 @@ public class Sketch : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		int totalCubes = 20;
-		float totalDistance = 2.5f;
+		float totalDistance = 2.0f;
 
 		for (int i = 0; i < totalCubes; i++) {
 			float perc = i / (float)totalCubes;
 
 			float sin = Mathf.Sin (perc * Mathf.PI/2);
 
-			float x = 2.0f + sin * totalDistance;
+			float x = 1.8f + sin * totalDistance;
 			float y = 5.0f;
 			float z = 0.0f;
 

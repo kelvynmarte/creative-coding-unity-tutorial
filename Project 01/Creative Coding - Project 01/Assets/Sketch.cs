@@ -22,7 +22,7 @@ public class Sketch : MonoBehaviour {
 			GameObject newCube = (GameObject) Instantiate (cubePrefab, new Vector3 (x, y, z), Quaternion.identity);
 			CubeRotation cubeRotation = newCube.GetComponent<CubeRotation> ();
 			cubeRotation.SetSize ((1-perc) * 0.6f);
-			cubeRotation.rotateSpeed = .4f + perc * 2.2f; // perc
+			cubeRotation.rotateSpeed = .4f + perc * 3.2f; // perc
 		}
 
 
